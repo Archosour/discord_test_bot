@@ -1,0 +1,12 @@
+{
+    "lotro_server_online" : "Lotro servers are up",
+    "lotro_server_offline" : "Lotro servers are down",
+    
+    "discord_reply_on_timeout" : "Slow down please, Im not fast enough!",
+
+    "OSRS_error_message" : "no info loaded or no valid command",
+
+    "no_permission_to_use_command" : "You have no permission to use this command",
+    "no_command_available" : "no command found"
+    
+}

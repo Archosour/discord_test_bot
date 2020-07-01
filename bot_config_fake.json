@@ -1,0 +1,7 @@
+{
+    "bot_key" : "Your bot key",
+    "bot_console_channel" : "channel ID of your console channel",
+    "bot_console_server" : "server ID of your test server",
+    "bot_name" : "Brave test Bot",
+    "ignore_channels" : "[Array of all channels to ignore, mostly for testing alongside the live version]"
+}

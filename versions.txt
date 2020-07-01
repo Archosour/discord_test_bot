@@ -1,0 +1,95 @@
+x.0.0   Mayor code change, new style, general rewrite
+0.x.0   new features, new set of commands
+0.0.x   new commands to excisting set, bug fixes, general maintaintenes
+
+known bugs:
+    --lotro status not updating
+    --uptime 1 month behind
+    hours showing up in uptime when less then an hour on
+
+
+v1.3.1
+    rework hardware/servers info
+    added logger function for console/discord/files 
+    replaced all console.log with the general.logger
+        main, runescape, discord_bot
+    bugfix
+        negative hours in uptime/timestamp
+        memory now shows up correctly in MB (about 1% off)
+        correcting timestamp for log files
+        lotro server down was did had an undefined string
+        new attempt at pinging lotro server
+
+v1.3.0
+    runescape item info made for rs3 as well
+    runescape ge price loaded when fetch fails
+    runescape ge price written to file when fetch succeed
+    runescape init for first time setup
+    runescape moved obj check to the top of function
+    runescape rename write_to_item_time to write_to_item_file
+    runescape added single ge item command
+
+    added paramater to disable notifications of leveling
+    added hardware command to get bot system info and game / nas info
+    moved console server id to bot_config
+    update the website with the latest commands
+    converted all vars to let in runscape fetchData function 
+    bugfix
+        no longer the message 'wrong channel' in console when typing in test-channels
+        user get notification again when leveling up
+        lotro timeout added to switching offline, hopefully we catch the downtime this time
+        random undefined in console => strict comparison on statuscode in runescape http request, it can also be a string alongside a number
+        username not defined in discord_bot.add_new_discord_user
+        
+v 1.2.0
+    rename messages, urls to json. corrected syntax
+    introduced configs folder, moved all configs into itm except bot_config
+    rename bot_key to bot_config
+    added 'console channel' and 'ignore channels' to bot_config
+    uptime command now has a user friendly format as return
+    bugfix
+        testbot now accept ge commands in test channels.
+        testbot now ignores commands outside of test channels
+        added forgotten breaks in the get commands
+        added forgotten default cases in commands
+        uptime command nolonger shows minutes when bot is less then 60 secunds up
+    added
+        function to check if all JSON files are loaded and contain the right amount of keys
+        progression system, the more toy chat, the higher your level will be, commands dont count
+    started to run produnction and test bots (no more testing in a live bot ^^)
+
+v 1.1.0
+    moved to modules
+        general vars
+        general functions
+        runescape
+        messages const
+        urls const
+    added  
+        github command 
+    bugfix
+        timestamp nog give proper hour
+        uptime now gives a daycount 
+
+v 1.0.1
+    added
+        get botinfo
+    bug fixes
+        ge commands nolonger useable in not allowed channels, check wasn't coppied over
+
+v 1.0.0
+    initial release to Github
+    commandhandeler with nested switch
+    external bot key
+    commands:
+        runescape oldschool ge prices
+        lotro server status
+        lotro beacon
+        player info
+        channel info
+        coffee
+        help / commands
+    known issues:
+        info not saved, will be lost when bot crashes or is stopped
+        nested switch is annoying
+        lots of clutter on the console
